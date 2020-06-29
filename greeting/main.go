@@ -25,7 +25,7 @@ func main() {
 		c = "localhost:6831"
 	}
 
-	tracer, reporter, closer, err := ginopentracing.InitTracing(fmt.Sprintf("greeting-api-go-gin:%s:%s", m, h), c, ginopentracing.WithEnableInfoLog(false))
+	tracer, reporter, closer, err := ginopentracing.InitTracing(fmt.Sprintf("greeting-api-go-gin:%s::", m), c, ginopentracing.WithEnableInfoLog(false))
 	if err != nil {
 		panic("unable to init tracing")
 	}
